@@ -1,0 +1,10 @@
+---
+- name: playbook to install figlet
+  hosts: planetexpress
+  gather_facts: no
+  tasks:
+  - name: using apt to install figlet
+    ansible.builtin.apt:
+      name: figlet
+      state: present
+    become: yes
